@@ -24,17 +24,16 @@
 
 #results {
   font-size: 24px;
-  margin-left: 90px;
-  margin-top: 20px;
+  /* margin-left: 90px;
+  margin-top: 20px; */
   color: rgb(241, 241, 241);
-  margin: 24px auto 0;
+  margin: 20px auto 0px;
 }
 
 button {
   width: 150px;
   height: 35px;
-  margin-left: 90px;
-  margin-top: 25px;
+  margin: 25px 0px 25px 90px;
   background-color: #fff;
   padding: 1px 30px;
   border-radius: 8px;
