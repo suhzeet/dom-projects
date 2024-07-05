@@ -1,9 +1,14 @@
 .container {
-  width: 575px;
+  width: full;
   height: 825px;
 
   background-color: #797978;
   padding-left: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
 }
 #height,
 #weight {
@@ -42,5 +47,4 @@ button {
 h1 {
   padding-left: 15px;
   padding-top: 25px;
-  
 }
