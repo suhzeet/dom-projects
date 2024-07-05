@@ -1,12 +1,8 @@
-# Projects related to DOM
+# DOM Projects
 
-## Projects Link
+### Solution code
 
-[Click here](https://stackblitz.com/edit/dom-project-chaiaurcode-rcfzzq?embed=1&file=index.html)
-
-# Solution code
-
-## Project 1
+### Project-1: BackgroundColor Changer
 
 ```javascript
 buttons.forEach((button) => {
