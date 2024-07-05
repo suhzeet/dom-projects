@@ -1,6 +1,6 @@
 # DOM Projects
 
-### Solution code
+### SOLUTION CODES :
 
 ### Project-1: BackgroundColor Changer
 
