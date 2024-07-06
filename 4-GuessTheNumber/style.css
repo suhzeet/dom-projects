@@ -92,7 +92,7 @@ button {
   margin: 0 auto;
   box-sizing: border-box;
   text-align: center;
-  width: 400px;
+  max-width: 400px;
   height: 550px;
   background-color: #474747;
   color: #fff;
