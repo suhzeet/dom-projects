@@ -26,7 +26,7 @@ body {
 
 .guesses {
   color: white;
-  padding: 7px;
+  padding: 3px 6px;
 }
 
 button {
@@ -85,13 +85,14 @@ button {
 
 .guesses {
   background-color: #7a7a7a;
+  border-radius: 5px;
 }
 
 #wrapper {
   margin: 0 auto;
   box-sizing: border-box;
   text-align: center;
-  width: 450px;
+  width: 400px;
   height: 550px;
   background-color: #474747;
   color: #fff;
@@ -117,4 +118,10 @@ p {
 .resultParas p {
   font-size: 16px;
   font-style: normal;
+}
+
+.lowOrHi {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
 }

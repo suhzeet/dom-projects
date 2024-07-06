@@ -29,15 +29,15 @@ form.addEventListener("submit", (e) => {
     remainGuess.innerHTML -= 1;
     if (guessNum === randomNum) {
       lowHigh.innerHTML = `<span>YOU WON !!! </span>`;
-      document.querySelector("body").style.backgroundColor = "#2f9cd7";
+      lowHigh.style.color = "#55FF55";
     } else if (guessNum > randomNum) {
-      lowHigh.innerHTML = `LOWER !!`;
+      lowHigh.innerHTML = `LOWER !! 👇🏻`;
     } else if (guessNum < randomNum) {
-      lowHigh.innerHTML = `HIGHER !!`;
+      lowHigh.innerHTML = `HIGHER !! 👆🏻`;
     }
   } else if (!(remainGuess.innerHTML > 0)) {
     lowHigh.innerHTML = `YOU LOST`;
-    document.querySelector("body").style.backgroundColor = "#db0917";
+    lowHigh.style.color = "#FF5555";
   } else {
     // console.log(guessNum, remainGuess);
 
