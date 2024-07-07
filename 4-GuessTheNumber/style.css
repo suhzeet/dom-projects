@@ -86,6 +86,7 @@ button {
 .guesses {
   background-color: #7a7a7a;
   border-radius: 5px;
+  margin-left: 4px;
 }
 
 #wrapper {
@@ -124,4 +125,18 @@ p {
   font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+p #newGame {
+  display: inline-block;
+  background-color: #343434;
+  padding: 3px 6px;
+  border-radius: 5px;
+  border: 2px #343434 solid;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+p #newGame:hover {
+  border: 2px solid #6c6d6d;
 }
