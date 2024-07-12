@@ -68,49 +68,12 @@ setInterval(() => {
 ### Project-4: Guess a Number
 
 ```javascript
-let randomNum = Math.trunc(Math.random() * 100 + 1);
-if (playGame) {
-  submitGuess.addEventListener("click", (e) => {
-    e.preventDefault();
-    const guess = userInput.value;
-    console.log(guess);
-    validGuess(guess);
-  });
-}
-
-function validGuess(guess) {
-  if (guess === "" || isNaN(guess)) alert("Please enter a valid number!");
-  else if (guess < 0) alert("Please enter value greater than 0!");
-  else if (guess > 100) alert("Please enter value greater than 100!");
-  else {
-    if (guessNum === 10) {
-      displayGuess(guess);
-      displayMessage(`Gave Over. Random Number was ${randomNum}`);
-      endGame();
-    } else {
-      displayGuess(guess);
-      checkGuess(guess);
-    }
-  }
-}
-
 function checkGuess(guess) {
   if (guess == randomNum) {
     endGame();
     displayMessage(`You guessed it RIGHT`);
   } else if (guess > randomNum) displayMessage(`Your guess is TOOO high`);
   else if (guess < randomNum) displayMessage(`Your guess is TOOO low`);
-}
-
-function displayGuess(guess) {
-  userInput.value = "";
-  guessSlot.innerHTML += `${guess}  `;
-  guessNum++;
-  remainGuess.innerHTML--;
-}
-
-function displayMessage(message) {
-  lowHigh.innerHTML = `<span>${message}</span>`;
 }
 
 function endGame() {
@@ -141,11 +104,36 @@ function newGame() {
 }
 ```
 
+### Project-5: Event KeyCodes
+
+```
+const insert = document.querySelector("#insert");
+
+window.addEventListener("keydown", (e) => {
+  insert.innerHTML = `
+        <div class="color">
+            <table>
+                <tr>
+                    <th>Key</th>
+                    <th>KeyCode</th>
+                    <th>Code</th>
+                </tr>
+                <tr>
+                    <td>${e.key === " " ? "Space" : e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.code}</td>
+                </tr>
+            </table>
+        </div>
+    `;
+});
+
+```
+
 ### Project-6: Unlimited Bg Change
 
 ```
 let changeBg;
-
 const randomColor = () => {
   const hex = "0123456789ABCDEF";
   let color = "#";
