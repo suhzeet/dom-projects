@@ -69,22 +69,6 @@ setInterval(() => {
 
 ```javascript
 let randomNum = Math.trunc(Math.random() * 100 + 1);
-console.log(randomNum);
-
-const submitGuess = document.querySelector("#subt");
-const userInput = document.querySelector("#guessField");
-const lowHigh = document.querySelector(".lowOrHi");
-const guessSlot = document.querySelector(".guesses");
-const remainGuess = document.querySelector(".lastResult");
-const startOver = document.querySelector(".resultParas");
-
-const p = document.createElement("p");
-
-let prevGuess = [];
-let guessNum = 1;
-
-let playGame = true;
-
 if (playGame) {
   submitGuess.addEventListener("click", (e) => {
     e.preventDefault();
@@ -155,4 +139,36 @@ function newGame() {
     playGame = true;
   });
 }
+```
+
+### Project-6: Unlimited Bg Change
+
+```
+let changeBg;
+
+const randomColor = () => {
+  const hex = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.trunc(Math.random() * 16)];
+  }
+  return color;
+};
+
+const startColorChange = () => {
+  if (!changeBg == true) {
+    changeBg = setInterval(() => {
+      document.querySelector("body").style.backgroundColor = randomColor();
+    }, 1000);
+    console.log(changeBg);
+  }
+};
+
+const stopColorChange = () => {
+  clearInterval(changeBg);
+  changeBg = null;
+};
+
+document.querySelector("#start").addEventListener("click", startColorChange);
+document.querySelector("#stop").addEventListener("click", stopColorChange);
 ```
